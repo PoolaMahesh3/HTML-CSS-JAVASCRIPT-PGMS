@@ -1,0 +1,95 @@
+// var arr=[1,2,2,3,3,5,5,6,7];
+// function removedt(arr){
+//   var unique=[];
+//   arr.forEach(element=>{
+//     if(!unique.includes(element)){
+//       unique.push(element);
+//     }
+//   });
+//    return unique;
+// }
+//  console.log(removedt(arr));
+
+//Fst Code:
+// let n = 5;
+// let string = "";
+// for (let i = 1; i <= n; i++) {
+//   for (let j = 0; j < i; j++) {
+//     string += "*";
+//   }
+//   string += "\n";
+// }
+// console.log(string);
+
+
+//Second Code:
+// let n = 4;
+// let string = "";
+// let count = 1;
+
+// for (let i = 1; i <= n; i++) {
+//   for (let j = 1; j <= i; j++) {
+//     string += count;
+//     count++;
+//   }
+//   string += "\n";
+// }
+// console.log(string);
+
+
+// let n = 6; 
+// let string = "";
+// let count = 1;
+
+// for (let i = 1; i <= n; i++) {
+ 
+//   for (let j = 1; j <= i; j++) {
+//     string += count;
+//     count++;
+//   }
+//   string += "\n";
+// }
+// console.log(string);
+
+
+
+// function printpairs(arr, sum)
+ //    {
+ //        let s = new Set();
+ //        for (let i = 0; i < arr.length; ++i)
+ //        {
+ //            let temp = sum - arr[i];
+ //            if (s.has(temp)) {
+ //                console.log(
+ //                    "sum "
+ //                    + sum + " is (" + arr[i]
+ //                    + ", " + temp + ")");
+ //            }
+ //            s.add(arr[i]);
+ //        }
+ //    }
+ //        let A = [ 1, 4, 45, 6, 10, 8 ];
+ //        let n = 16;
+ //        printpairs(A, n);
+
+
+
+
+// const arr = [1,2,3,3,3,5,5,6,6,4,4,];
+
+// const count = {};
+
+// for (const element of arr) {
+//   if (count[element]) {
+//     count[element] += 1;
+//   } else {
+//     count[element] = 1;
+//   }
+// }
+
+// console.log(count); // 
+
+
+
+
+

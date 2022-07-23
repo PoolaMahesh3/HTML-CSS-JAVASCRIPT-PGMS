@@ -1,0 +1,203 @@
+// var arr = new Array(2);
+// for (var i = 0; i < arr.length; i++) {
+// 	arr[i] = new Array(2);
+// }
+// var h = 1;
+// for (var i = 0; i < 2; i++) {
+// 	for (var j = 0; j < 2; j++) {
+// 		arr[i][j] = h++;
+// 	}
+// }
+// for (var i = 0; i < 2; i++) {
+// 	for (var j = 0; j < 2; j++) {
+// 		console.log(arr[i][j] + " ");
+// 	}
+// 	console.log("<br>");
+// // }
+		
+
+	
+// function Boundary(a, m, n)
+// {
+//   let result = []
+// 	for (var i = 0; i < m; i++) {
+//     let b1 = []
+// 		for (var j = 0; j < n; j++) {
+// 			if (i == 0)
+// 				console.log(a[i][j] + '');
+// 			else if (i == m - 1)
+// 				console.log(a[i][j] + '');
+// 			else if (j == 0)
+// 				console.log(a[i][j] + '');
+// 			else if (j == n - 1)
+// 				console.log(a[i][j] + '');
+// 			else
+// 				console.log("");
+// 		}
+// 		console.log("");
+// 	}
+//   // a.slice(0,4);
+//   // return a;
+// }
+
+// var a = [ [ 1, 2, 3, 4 ],
+// 			[ 5, 6, 7, 8 ],
+// 			[ 1, 2, 3, 4 ],
+// 			[ 5, 6, 7, 8 ]];
+// console.log(Boundary(a,4,4))
+
+
+function getarrdepth(obj) {
+    if (Array.isArray(obj)) return 1 + Math.max(...obj.map(t => getarrdepth(t)))
+    else 
+      return 0
+}
+let arr=[1,2,[3,4,[5,6],7,[8,[9,91]],10],11,12]
+console.log(getarrdepth(arr))
+console.log(getarrdepth([1,[1]]));
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  
+ 
+ <title>To-Do List</title>
+
+ <style>
+    #candidate {
+        border-radius: 20%;
+        border-color: aquamarine;
+        box-sizing: border-box;
+    }
+     
+    .buttonClass {
+        border-radius: 20%;
+        border-color: aqua;
+        border-style: inherit;
+    }
+     
+    button:hover {
+        background-color: green;
+    }
+</style>
+ 
+
+ <script>
+    //  function addItem() {
+    //         var a = document.getElementById("list");
+    //         var candidate = document.getElementById("candidate");
+    //         var candidate1 = document.getElementById("candidate1");
+    //         var li = document.createElement("li");
+    //         li.setAttribute('id', candidate.value);
+    //         li.setAttribute('id', candidate1.value);
+            
+    //         li.appendChild(document.createTextNode(candidate.value));
+    //         li.appendChild(document.createTextNode(candidate1.value));
+
+    //         a.appendChild(li);
+        
+
+    //     var a = document.getElementById("list");
+    //         var candidate = document.getElementById("candidate");
+    //         var item = document.getElementById(candidate.value);
+    //         a.removeChild(item);
+
+
+    
+function addItem(e) {
+    let newItem = document.getElementById("item").value;
+    let li = document.createElement("li");
+    li.className = "list-group-item";
+  
+    let deleteButton = document.createElement("button");
+  
+    deleteButton.className = 
+        "btn-danger btn btn-sm float-right delete";
+        deleteButton.appendChild(document.createTextNode("Delete"));
+  
+  let editButton = document.createElement("button");
+  li.appendChild(document.createTextNode(newItem));
+    li.appendChild(deleteButton);
+}
+    
+ </script>
+
+
+ <body>
+
+    
+        <h2>My To Do List</h2>
+        <!-- <input type="text" id="candidate" placeholder="Please Enter Name"> -->
+
+        <input type="text" onkeyup=
+                        "toggleButton(this, 'submit')"
+                        class="form-control" id="item">
+        <br>
+        <br>
+        <!-- <input type="text" id="candidate1" placeholder="Please Enter Name"> -->
+        <br>
+        <br>
+        
+        <!-- <input class = "buttonClass" type = "button" value = Add id="append" onclick="addItem()" /> -->
+
+        <div class="col-lg-5 col-md-5 col-sm-5">
+            <input type="submit" class="btn btn-dark"
+                  id="submit" value="Submit">
+          </div>
+
+
+        <h2>list</h2>
+        <div id="adddiv">
+        <ul id="list-group"></ul>
+    </div>
+
+ </body>
+
+ 
+// // var myNodelist = document.getElementsByTagName("LI");
+// var i;
+// for (i = 0; i < myNodelist.length; i++) {
+//   var span = document.createElement("SPAN");
+//   var txt = document.createTextNode("\u00D7");
+//   span.className = "close";
+//   span.appendChild(txt);
+//   myNodelist[i].appendChild(span);
+// }
+
+// var close = document.getElementsByClassName("close");
+// var i;
+// for (i = 0; i < close.length; i++) {
+//   close[i].onclick = function() {
+//     var div = this.parentElement;
+//     div.style.display = "none";
+//   }
+// }
+
+// function newElement() {
+//   var li = document.createElement("li");
+//   var inputValue = document.getElementById("myInput").value;
+//   var t = document.createTextNode(inputValue);
+//   li.appendChild(t);
+//   if (inputValue === '') {
+//     alert("You must write something!");
+//   } else {
+//     document.getElementById("myUL").appendChild(li);
+//   }
+//   document.getElementById("myInput").value = "";
+
+//   var span = document.createElement("SPAN");
+//   var txt = document.createTextNode("\u00D7");
+//   span.className = "close";
+//   span.appendChild(txt);
+//   li.appendChild(span);
+
+//   for (i = 0; i < close.length; i++) {
+//     close[i].onclick = function() {
+//       var div = this.parentElement;
+//       div.style.display = "none";
+//     }
+//   }
+// }
+
+
+

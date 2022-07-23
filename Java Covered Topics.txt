@@ -1,0 +1,18 @@
+Abstraction, inheritance, final keywrod, interface, one to many many to one, Marker interfaces, inner classes, design pattern, Singleton,Lambda expression,Exception Handling,threading,collection,jdbc
+
+javadocs---> tutorial point
+
+
+pending Github
+
+exceptions
+
+person
+
+
+
+
+
+
+ 
+	
